@@ -1,0 +1,38 @@
+.image {
+    width: 100px;
+    height: 100px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gametitle {
+    text-align: center;
+    font-size: 100px;
+    color: black;
+}
+
+.instructions {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: black;
+}
+
+#randomNumber {
+    font-size: 45px;
+    color: black;
+}
+
+#userScore {
+    font-size: 45px;
+    color: black;
+}
+
+body {
+    background-image: url(../images/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
