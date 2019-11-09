@@ -1,5 +1,8 @@
 $(document).ready(function() {
-
+//Global varibles
+//Generate a random number between 19 and 120
+//Generate 4 random numbers between 1 and 12
+//Assign 4 random generated numbers to individual gems
 var startScore = 0;
 var userScore = 0;
 var winCounter = 0;
@@ -9,17 +12,6 @@ var diamondRandom = Math.floor(Math.random() * 12) + 1;
 var emeraldRandom = Math.floor(Math.random() * 12) + 1;
 var rubyRandom = Math.floor(Math.random() * 12) + 1;
 var sapphireRandom = Math.floor(Math.random() * 12) + 1;
-
-
-//Generate a random number between 19 and 120
-//Generate 4 random numbers between 1 and 12
-//Assign 4 random generated numbers to individual gems
-//Each click on each gem adds its random value to userscore
-//Evaluate userscore and random number, if userscore > random number, you lose
-//If userscore and random number ===, you win
-//If userscore < random number, keep playing
-
-
 
 function resetGame(){
     startScore = 0;
@@ -34,7 +26,7 @@ function resetGame(){
 
     startGame();
 }
-
+//Start game, select random numbers for gems and target number
 function startGame() {
 
     randNum = Math.floor(Math.random() * 102) + 19;
@@ -42,16 +34,22 @@ function startGame() {
     emeraldRandom = Math.floor(Math.random() * 12) + 1;
     rubyRandom = Math.floor(Math.random() * 12) + 1;
     sapphireRandom = Math.floor(Math.random() * 12) + 1;
+    
+    //Testing
     console.log(diamondRandom);
     console.log(emeraldRandom);
     console.log(rubyRandom);
     console.log(sapphireRandom);
 
-//Write random number to page
+//Write random number and userScore to page
 $("#randomNumber").text(randNum);    
 $("#userScore").text(startScore);
 }
 
+//Each click on each gem adds its random value to userscore
+//Evaluate userscore and random number, if userscore > random number, you lose
+//If userscore and random number ===, you win
+//If userscore < random number, keep playing
 $("#diamond").on("click", function(){
     userScore += diamondRandom
     $("#userScore").text(userScore);
