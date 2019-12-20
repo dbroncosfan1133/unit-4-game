@@ -35,12 +35,6 @@ $(document).ready(function () {
         rubyRandom = Math.floor(Math.random() * 12) + 1;
         sapphireRandom = Math.floor(Math.random() * 12) + 1;
 
-        //Testing
-        // console.log(diamondRandom);
-        // console.log(emeraldRandom);
-        // console.log(rubyRandom);
-        // console.log(sapphireRandom);
-
         //Write random number and userScore to page
         $("#randomNumber").text(randNum);
         $("#userScore").text(startScore);
